@@ -1,2 +1,2 @@
 lang = "bash"
-run = "clang++ -std=c++2a ./main.cpp -o main && ./main"
+run = "clang++ -std=c++2a ./main.cpp ./lib/calculator/Calculator.cpp -o main && ./main"

@@ -8,47 +8,14 @@
 #include <iostream>
 using namespace std;
 
-class Calculator {
-	private:
-		int result, first, second;
-
-	public:
-		void add()
-		{
-			result = first + second;
-		};
-
-		void subtract() {
-			result = first - second;
-		}
-
-		void multiply() {
-			result = first * second;
-		}
-
-		void divide() {
-			result = first / second;
-		}
-
-		void displayResult() {
-			cout << "\nResult: " << result;
-		}
-
-		void setFirst(int a){
-			first = a;
-		}
-
-		void setSecond(int b){
-			second = b;
-		}
-};
+#include "./lib/calculator/Calculator.h"
 
 int main() {
 	int num, calculation;
 	
 	Calculator myCalculator;
 
-	cout << "Type in first integer:";
+	cout << "\nType in first integer:";
 	cin >> num;
 	myCalculator.setFirst(num);
 	
@@ -56,7 +23,7 @@ int main() {
 	cin >> num;
 	myCalculator.setSecond(num);
 
-	cout << "1- Add\n2- Subtract\n3- Multiply\n4- Divide" << endl << "\nSelect calculation (1,2,3,4):";
+	cout << "1- Add\n 2- Subtract\n 3- Multiply\n4- Divide" << "\nSelect calculation (1,2,3,4):";
 	
 	cin >> calculation;
 
@@ -78,7 +45,7 @@ int main() {
 			myCalculator.add();
 	}
 
-	myCalculator.displayResult();
+	myCalculator.getResult();
 
 	return 0;
 } 
